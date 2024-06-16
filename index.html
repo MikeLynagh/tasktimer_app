@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+    </head>
+    <body>
+        <div class="container">
+            <h1>Task Timer</h1>
+            <div class="form-group">
+                <label for="taskName">Task Name</label>
+                <input type="text" class="form-control" id="taskName">
+            </div>
+            <div class="form-group">
+                <label for="taskLabel">Task Label</label>
+                <input type="text" class="form-control" id="taskLabel">
+            </div>
+            <div class="form-group">
+                <button id="startBtn">Start</button>
+                <button id="pauseBtn">Pause</button>
+                <button id="stopBtn">Stop</button>
+                <button id="exportBtn">Export to CSV</button>
+            </div>
+            <div class="form-group">
+                <p>Time spent: <span id="timer">0:00:00</span></p>
+            </div>
+            <h2>Task History</h2>
+            <ul id="taskHistory" class="list-group">
+                <!-- task history here-->
+            </ul>
+
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
