@@ -1,7 +1,7 @@
     // Initialize global variables
     let startTime, elapsedTime = 0, timerInterval, isTimerRunning = false;
     let startDayTime, elapsedDayTime = 0, timerDayInterval, isDayTimerRunning = false;
-
+  // this has something to do with issue 
 document.addEventListener("DOMContentLoaded", (event) => {
 
     const timerDisplay = document.getElementById("timer");
