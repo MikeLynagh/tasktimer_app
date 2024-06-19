@@ -1,7 +1,8 @@
-document.addEventListener("DOMContentLoaded", (event) => {
     // Initialize global variables
     let startTime, elapsedTime = 0, timerInterval, isTimerRunning = false;
     let startDayTime, elapsedDayTime = 0, timerDayInterval, isDayTimerRunning = false;
+
+document.addEventListener("DOMContentLoaded", (event) => {
 
     const timerDisplay = document.getElementById("timer");
     const startBtn = document.getElementById("startBtn");
@@ -83,6 +84,7 @@ function startDayTimer(timerDayDisplay) {
     isDayTimerRunning = true;
     saveDayState();
 }
+
 
 // Function to pause day timer
 function pauseDayTimer() {
