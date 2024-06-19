@@ -6,6 +6,27 @@
     <body>
         <div class="container">
             <h1>Task Timer</h1>
+            <div>
+                <div class="form-group">
+                    <h4><label for="fullDay">Track Full Day</label></h4>
+                    <select name="mainworkday" id="mainworkday">
+                        <option value="Monday">Monday</option>
+                        <option value="Tuesday">Tuesday</option>
+                        <option value="Wednesday">Wednesday</option>
+                        <option value="Thursday">Thursday</option>
+                        <option value="Friday">Friday</option>
+                        
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button id="startDayBtn">Start Day</button>
+                    <button id="pauseDayBtn">Pause Day </button>
+                    <button id="stopDayBtn">Stop Day</button>
+                </div>
+                <div class="form-group">
+                    <p>Work day: Time spent: <span id="daytimer">0:00:00</span></p>
+                </div>
+            </div>
             <div class="form-group">
                 <label for="taskDay">Choose Day: </label>
                 <select name="workday" id="workday">
@@ -37,7 +58,7 @@
             <h2>Task History</h2>
             <!-- <ul id="taskHistory" class="list-group">
             </ul> -->
-            <table>
+            <table id="tableData">
                 <thead>
                     <tr>
                         <th>Date</th>
@@ -47,7 +68,9 @@
                         <th>Time Spent</th>
                     </tr>
                 </thead>
-                <tbody id="tableData"></tbody>
+                <tbody>
+                    
+                </tbody>
             </table>
             
 
