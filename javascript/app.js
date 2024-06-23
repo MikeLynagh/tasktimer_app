@@ -74,6 +74,9 @@ function stopTimer(timerDisplay) {
 
 // Function to start day timer
 function startDayTimer(timerDayDisplay) {
+    const clock = document.getElementById("clock")
+    const progressCircle = document.getElementById("progress-circle")
+    progressCircle.classList.add("progress-circle--running")
     startDayTime = Date.now() - elapsedDayTime;
     timerDayInterval = setInterval(() => {
         if (isDayTimerRunning) {
@@ -88,6 +91,9 @@ function startDayTimer(timerDayDisplay) {
 
 // Function to pause day timer
 function pauseDayTimer() {
+    const clock = document.getElementById("clock")
+    const progressCircle = document.getElementById("progress-circle")
+    progressCircle.classList.remove("progress-circle--running")
     clearInterval(timerDayInterval);
     isDayTimerRunning = false;
     saveDayState();
@@ -95,6 +101,9 @@ function pauseDayTimer() {
 
 // Function to stop day timer
 function stopDayTimer(timerDayDisplay) {
+    const clock = document.getElementById("clock")
+    const progressCircle = document.getElementById("progress-circle")
+    progressCircle.classList.remove("progress-circle--running")
     clearInterval(timerDayInterval);
     const workDay = document.getElementById("mainworkday").value;
     const timeSpent = timeToString(elapsedDayTime);

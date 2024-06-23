@@ -1,61 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Task timer</title>
+       <!-- Bootstrap CSS--> 
+       <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+       <link href="css/clock.css" rel="stylesheet">
     </head>
     <body>
         <div class="container">
-            <h1>Task Timer</h1>
-            <div>
-                <div class="form-group">
-                    <h4><label for="fullDay">Track Full Day</label></h4>
-                    <select name="mainworkday" id="mainworkday">
-                        <option value="Monday">Monday</option>
-                        <option value="Tuesday">Tuesday</option>
-                        <option value="Wednesday">Wednesday</option>
-                        <option value="Thursday">Thursday</option>
-                        <option value="Friday">Friday</option>
-                        
-                    </select>
-                </div>
-                <div class="form-group">
-                    <button id="startDayBtn">Start Day</button>
-                    <button id="pauseDayBtn">Pause Day </button>
-                    <button id="stopDayBtn">Stop Day</button>
-                </div>
-                <div class="form-group">
-                    <p>Work day: Time spent: <span id="daytimer">0:00:00</span></p>
+            <div class="row">
+                <div class="col">
+                    <h1>Task Timer </h1>
                 </div>
             </div>
-            <div class="form-group">
-                <label for="taskDay">Choose Day: </label>
-                <select name="workday" id="workday">
-                    <option value="Monday">Monday</option>
-                    <option value="Tuesday">Tuesday</option>
-                    <option value="Wednesday">Wednesday</option>
-                    <option value="Thursday">Thursday</option>
-                    <option value="Friday">Friday</option>
-
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="taskName">Task Name</label>
-                <input type="text" class="form-control" id="taskName">
-            </div>
-            <div class="form-group">
-                <label for="taskLabel">Task Label</label>
-                <input type="text" class="form-control" id="taskLabel">
-            </div>
-            <div class="form-group">
-                <button id="startBtn">Start</button>
-                <button id="pauseBtn">Pause</button>
-                <button id="stopBtn">Stop</button>
-                <button id="exportBtn">Export to CSV</button>
-            </div>
-            <div class="form-group">
-                <p>Time spent: <span id="timer">0:00:00</span></p>
-            </div>
-            <h2>Task History</h2>
+            <div class="row">
+                <div class="col">row 1 of 2
+                    <form>
+                        <div class="mb-3">
+                             <h4><label for="fullDay">Track Full Day</label></h4>
+                            <select name="mainworkday" id="mainworkday">
+                                <option value="Monday">Monday</option>
+                                <option value="Tuesday">Tuesday</option>
+                                <option value="Wednesday">Wednesday</option>
+                                <option value="Thursday">Thursday</option>
+                                <option value="Friday">Friday</option>
+                                
+                            </select>
+                        </div>
+                    </form> 
+                    <div>
+                       
+                        <div>
+                            <button type="button" class="btn btn-dark" id="startDayBtn">Start Day</button>
+                            <button type="button" class="btn btn-dark" id="pauseDayBtn">Pause Day </button>
+                            <button type="button" class="btn btn-dark" id="stopDayBtn">Stop Day</button>
+                        </div>
+                        <!-- <div class="form-group">
+                            <p>Work day: Time spent: <span id="daytimer">0:00:00</span></p>
+                        </div> -->
+                        <div class="container mt-5">
+                            <div class="clock-container">
+                                <div class="clock" id="clock">
+                                    <span id="daytimer">0:00:00</span> 
+                                </div>
+                                <div class="progress-circle" id="progress-circle"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="taskDay">Choose Day: </label>
+                        <select name="workday" id="workday">
+                            <option value="Monday">Monday</option>
+                            <option value="Tuesday">Tuesday</option>
+                            <option value="Wednesday">Wednesday</option>
+                            <option value="Thursday">Thursday</option>
+                            <option value="Friday">Friday</option>
+        
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="taskName">Task Name</label>
+                        <input type="text" class="form-control" id="taskName">
+                    </div>
+                    <div class="form-group">
+                        <label for="taskLabel">Task Label</label>
+                        <input type="text" class="form-control" id="taskLabel">
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-dark" id="startBtn">Start</button>
+                        <button type="button" class="btn btn-dark" id="pauseBtn">Pause</button>
+                        <button type="button" class="btn btn-dark" id="stopBtn">Stop</button>
+                    </div>
+                    <div class="form-group">
+                        <p>Time spent: <span id="timer">0:00:00</span></p>
+                    </div>
+                </div>
+                <div class="col">row 2 of 2
+                    <h2>Task History</h2>
 
             <table id="tableData">
                 <thead>
@@ -71,9 +94,19 @@
                     
                 </tbody>
             </table>
-            
+            <button type="button" class="btn btn-dark" id="exportBtn">Export to CSV</button>
+
+                </div>
+            </div> 
+
+
 
         </div>
-        <script src="app.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script src="javascript/app.js"></script>
+    <script src="javascript/clock.js"></script>
     </body>
 </html>
